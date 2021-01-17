@@ -20,7 +20,7 @@ $i=0;
 foreach($json->posts as $post){
     $text_link_result[$i] = $post->$attrs_arr[0];
     $text_title[$i] = $post->$attrs_arr[1];
-    $text_date[$i] = $post->$attrs_arr[2];
+    $text_date[$i] = date('d-m-Y', time());
     $right_image_links[$i] = $post->$attrs_arr[3];
     echo $text_link_result[$i];
     echo '<br>';

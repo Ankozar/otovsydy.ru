@@ -31,7 +31,7 @@ $conn = new mysqli('localhost', 'cl275917_admin', 'admin1', 'cl275917_news');
 //////////////////////////////////////
 //Формируем переменную запроса списка источников
 //////////////////////////////////////
-$select_sources = "SELECT `sourceNameInDb`, `source_title`
+$select_sources = "SELECT `sourceNameInDb`, `source_title`, `source_url`
 FROM `sources`
 WHERE
 `source_category`= '" . $category . "'
@@ -50,6 +50,7 @@ $i=0;
 foreach ($select_sources_query as $row) {
    $sources_array[$i] = $row['sourceNameInDb'];
    $sources_titles_array[$i] = $row['source_title'];
+   $source_url[$i] = $row['source_url'];
    $i++;
 };
 //////////////////////////////////////
@@ -64,7 +65,7 @@ foreach ($sources_array as $next_source) {
  LIMIT " . $count;
  $select_news_query = mysqli_query($conn,$select_news);
  $source_name = $sources_titles_array[$j];
- $news_block_source_name[$j] = '<div class=\'block_news block' . $j . '\'><h4 class=\'news_source source' . $j . '\'>' . 'Источник: ' . $source_name . '<div class=\'hide hide' . $j . '\'>скрыть/показать</div>';
+ $news_block_source_name[$j] = '<div class=\'block_news block' . $j . '\'><h4 class=\'news_source source' . $j . '\'>' . '<a href="' . $source_url[$j] . '"class="source_url"> Источник: ' . $source_name . '</a><div class=\'hide hide' . $j . '\'>скрыть/показать</div>';
 // $news_block_source_name[$j] = $source_name;
 //  echo $news_block_source_name;
  $i = 0;

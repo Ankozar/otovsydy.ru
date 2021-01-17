@@ -12,7 +12,7 @@ $i=0;
 foreach($json->posts as $post){
     $text_link_result[$i] = $post->url;
     $text_title[$i] = $post->title;
-    $text_date[$i] = $post->date;
+    $text_date[$i] = date('d-m-Y', time());
     $right_image_links[$i] = $post->img;
     // echo $text_link_result[$i];
     // echo '<br>';

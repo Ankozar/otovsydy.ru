@@ -3,6 +3,8 @@
     border-color: rgba(0, 0, 0, 0.425);
     box-sizing: border-box;
     margin: 0;
+    text-decoration-line: none;
+
 }
 
 html {
@@ -246,14 +248,21 @@ body {
                             border-radius: 5px;
                             box-shadow: 2px 2px 7px 0px black;
                     }
+                                    .news_source :hover{
+                                        color: #ff7f50;
+                                    }
+                                        .source_url {
+                                            color: rgb(131, 110, 110);
+                                        }
+                                            .source_url :hover{
+                                                color: #ff7f50;
+                                            }
                             .hide{
                                 justify-self: center;
 
                                 font-size: 1em;
                             }
-                            .hide :hover{
-                                    color: coral;
-                                }
+
 
                     .piece_of_news {
                         height: fit-content;

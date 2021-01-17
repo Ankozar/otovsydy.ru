@@ -1,10 +1,10 @@
 <?php
 
 include '/var/www/cl275917/data/www/otovsydy.ru/php/phpQuery-onefile.php';
-$source_url = 'https://csp72.ru/novosti/';
-$source_link_first_part = 'https://csp72.ru';
-$sourceNameInDb = 'source_csp72_to';
-$attrs = '.news-list,.item,a,href,.name,img,src';
+$source_url = 'http://www.tyumen-city.ru/';
+$source_link_first_part = 'http://www.tyumen-city.ru';
+$sourceNameInDb = 'source_tyumen-city_adm_to';
+$attrs = '.blue,a,a,href,strong,img,src';
 $attrs_arr = preg_split('/,/', $attrs);
 // $method=get_news_method_universal_gtfc_1/robot_writer.php
 //print_r($attrs_arr);
